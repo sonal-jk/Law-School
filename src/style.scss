@@ -27,18 +27,7 @@ body {
         height: 8%;
     }
 
-    .hamburger{
-      width: 20%;
-        height: 20%;
-        display: flex;
-        flex-flow: column ;
-      .bar1{
-        width: 100%;
-        height: 10%;
-        background-color: white;
-
-      }
-    }
+    
 
     ul{
         width: 50%;
@@ -366,9 +355,45 @@ footer{
 
   @media (max-width:763px){
     nav{
+      ul.show{
+        display: none;
+        right: -2vmin;
+      }
+      
+      ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: calc(10vmin);
+        background-color: #176B87;
+        padding: 2%;
+        right: 2vmin;
+        width: 20vmax;
+        transition: 0.4s;
+        li{
+         text-align: center;
+         width: 100%;
+         padding: 3%;
+         
+        }
+        #apply{
+          background-color: #176B87;
+          a{
+            background-color: #19325c;
+            padding: 2% 6%;
+            border-radius: 4px;
+          }
+        }
+        li:hover{
+          background-color: #1b4a5a;
+        }
+        
+      }
       img{
         width: 35vmin;
         height: 8vmin;
+        
       }
     }
     .contact{

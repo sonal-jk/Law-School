@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from './images/logo.png'
 import {Outlet, Link } from "react-router-dom";
 import "./style.scss"
 import call from './images/call.png'
 import mail from './images/mail.png'
-function toggleActiveClass(){
-
-}
+import Hamburger from "./pages/Hamburger";
 
 function Layout(){
+  const z=document.querySelector("nav ul")
+  const [ham,setham]=useState(false);
+  const toggleham=()=>{
+    setham(!ham);
+    z.classList.toggle('show')
+  }
+  
     return(
         <div className="container">
          <nav>
@@ -24,15 +29,28 @@ function Layout(){
             <Link to="/academics">ACADEMICS</Link>
           </li>
           <li id="apply">
-            <Link to="/apply">APPLY</Link>
+            <Link id="ap" to="/apply">APPLY</Link>
           </li>
         </ul>
-       {/*<div className="hamburger"  onClick={toggleActiveClass}>
-            <span className='bar1'></span>
-            <span className='bar2'></span>
-            <span className='bar3'></span>
-    </div>*/}
+       <div className="hamburger" onClick={toggleham}>
+        <Hamburger Open={ham} />
+       </div>
       </nav>
+      <style jsx>{`
+      .hamburger{
+        width:20%;
+        nav ul{
+          
+        }
+      @media (max-width:763px){
+        nav{
+          ul{
+            display:none;
+          }
+        }
+      }
+      }
+      `}</style>
       <Outlet/>
       <footer>
         <div className="foot">
