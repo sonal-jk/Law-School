@@ -4,6 +4,9 @@ import {Outlet, Link } from "react-router-dom";
 import "./style.scss"
 import call from './images/call.png'
 import mail from './images/mail.png'
+function toggleActiveClass(){
+
+}
 
 function Layout(){
     return(
@@ -25,9 +28,9 @@ function Layout(){
           </li>
         </ul>
        {/*<div className="hamburger"  onClick={toggleActiveClass}>
-            <span className='bar'></span>
-            <span className='bar'></span>
-            <span className='bar'></span>
+            <span className='bar1'></span>
+            <span className='bar2'></span>
+            <span className='bar3'></span>
     </div>*/}
       </nav>
       <Outlet/>

@@ -26,6 +26,20 @@ body {
         width: 20%;
         height: 8%;
     }
+
+    .hamburger{
+      width: 20%;
+        height: 20%;
+        display: flex;
+        flex-flow: column ;
+      .bar1{
+        width: 100%;
+        height: 10%;
+        background-color: white;
+
+      }
+    }
+
     ul{
         width: 50%;
         display: flex;
@@ -351,8 +365,43 @@ footer{
 }
 
   @media (max-width:763px){
+    nav{
+      img{
+        width: 35vmin;
+        height: 8vmin;
+      }
+    }
+    .contact{
+      background: url('./images/vertical.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 150vmin;
+      .form{
+        margin: 0 5%;
+        display: flex;
+        align-items: center;
+        form{
+          font-size: 3vmin;
+          height: 70%;
+          width: 50%;
+          input{
+            font-size: 3vmin;
+            width: 100%;
+            
+          }
+          select,button{
+            font-size: 3vmin;
+          }
+          
+        }
+      }
+    }
+    .paras{
+      margin-bottom:10% ;
+    }
     .about{
       margin-top: 10%;
+     
       strong{
         font-size: 4vmax;
         margin:0 10%;
@@ -389,7 +438,9 @@ footer{
 }
 
   footer{
+    font-size: 2vmin;
     .foot{
+      margin-top: 2%;
       #row2{
         display: block;
         #sub-row1,#sub-row2{
@@ -399,8 +450,9 @@ footer{
     }
   }
 }
-@media (max-width:510px){
+@media (max-width:361px){
   footer{
+    font-size: 4vmin;
     width: 100%;
     .foot{
       #row1{
