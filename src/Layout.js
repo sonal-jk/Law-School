@@ -56,10 +56,12 @@ function Layout(){
             justify-content: center;
             position: absolute;
             top: calc(10vmin);
-            background-color: #176B87;
+            background-color: #fdfdfd;
             padding: 2%;
             right: 2vmin;
-            width: 20vmax;
+            width: 80vw;
+            border:0.5px solid black;
+            transition:0.4s;
           }
         }
       `}</style>
