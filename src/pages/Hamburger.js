@@ -12,7 +12,7 @@ export default function Hamburger({Open}){
         .hamburger{
         width:2rem;
         height:2rem;
-        display:flex;
+        display:none;
         flex-flow:column;
         justify-content:space-around;
         .bar{
@@ -23,7 +23,7 @@ export default function Hamburger({Open}){
 
         }
         .bar1{
-            transform:${Open ? 'rotate(45deg) translate(0px,15px)':'rotate(0deg)'};
+            transform:${(Open) ? 'rotate(45deg) translate(0px,15px)':'rotate(0deg)'};
         }
         .bar2{
             transform:${Open?'translateX(100%)' : 'translateX(0%)'};
@@ -33,7 +33,13 @@ export default function Hamburger({Open}){
             transform:${Open? 'rotate(-45deg) translate(0px,-15px)': 'rotate(0deg)'};
         }
 
-        }`}
+        }
+         @media screen and (max-width:763px){
+            .hamburger{
+                display:flex;
+            }
+         }
+        `}
     </style></>
     )
 }

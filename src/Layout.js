@@ -6,19 +6,27 @@ import call from './images/call.png'
 import mail from './images/mail.png'
 import Hamburger from "./pages/Hamburger";
 
+/*const z=document.getElementById("#list")
+const y=document.querySelector(".hamburger")
+
+y.addEventListener("click",()=>{
+  z.classList.toggle("show")
+
+})*/
+
 function Layout(){
-  const z=document.querySelector("nav ul")
+  
   const [ham,setham]=useState(false);
   const toggleham=()=>{
     setham(!ham);
-    z.classList.toggle('show')
+    
   }
   
     return(
         <div className="container">
          <nav>
         <img src={logo} alt="LOGO"/>
-        <ul>
+        <ul id="list">
           <li>
             <Link to="/">HOME</Link>
           </li>
@@ -38,18 +46,22 @@ function Layout(){
       </nav>
       <style jsx>{`
       .hamburger{
-        width:20%;
-        nav ul{
+        width:20%;   
+      }
+        @media screen and (max-width:763px){
           
-        }
-      @media (max-width:763px){
-        nav{
-          ul{
-            display:none;
+         nav ul {
+          display: ${ ham ? "flex" : "none"};
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: calc(10vmin);
+            background-color: #176B87;
+            padding: 2%;
+            right: 2vmin;
+            width: 20vmax;
           }
         }
-      }
-      }
       `}</style>
       <Outlet/>
       <footer>
