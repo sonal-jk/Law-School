@@ -58,10 +58,17 @@ function Layout(){
             top: calc(10vmin);
             background-color: #fdfdfd;
             padding: 2%;
-            right: 2vmin;
+            right:-100vmin;
             width: 80vw;
             border:0.5px solid black;
-            transition:0.4s;
+            opacity:${ham ?1:0};
+            animation:slide 0.4s forwards;
+          }
+
+        }
+        @keyframes slide{
+          100%{
+            right:2vmin;
           }
         }
       `}</style>

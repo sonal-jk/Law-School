@@ -355,6 +355,7 @@ footer{
 
   @media (max-width:763px){
     nav{
+      transition: all 0.4s;
         li{
          text-align: center;
          width: 100%;
